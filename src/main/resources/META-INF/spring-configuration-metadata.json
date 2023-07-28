@@ -1,0 +1,835 @@
+{
+  "groups": [
+    {
+      "name": "sip",
+      "type": "com.ruoyi.sip_server.config.SipConfig",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "swagger",
+      "type": "com.ruoyi.config.SwaggerConfig",
+      "sourceType": "com.ruoyi.config.SwaggerConfig"
+    },
+    {
+      "name": "thread-pool",
+      "type": "com.ruoyi.config.ThreadPoolConfig",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "zlmediakit",
+      "type": "com.ruoyi.media.config.ZLMediaKitConfig",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "sip.domain",
+      "type": "java.lang.String",
+      "description": "域编码",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.http-port",
+      "type": "java.lang.Integer",
+      "description": "启动端口",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.id",
+      "type": "java.lang.String",
+      "description": "编码",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.ip",
+      "type": "java.lang.String",
+      "description": "本地ip",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.is-https",
+      "type": "java.lang.Boolean",
+      "description": "是否是Https",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.keepalive-timeout",
+      "type": "java.lang.Integer",
+      "description": "设备注册存活时间",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.listen-ip",
+      "type": "java.lang.String",
+      "description": "监听ip",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.password",
+      "type": "java.lang.String",
+      "description": "sip服务器密码",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.port",
+      "type": "java.lang.Integer",
+      "description": "本地端口",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.sdp-expand",
+      "type": "java.lang.Boolean",
+      "description": "sdp增强",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.sip-factory",
+      "type": "javax.sip.SipFactory",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.sip-server",
+      "type": "com.ruoyi.sip_server.SipServer",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.sip-stack",
+      "type": "javax.sip.SipStack",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.tcp-listening-point",
+      "type": "javax.sip.ListeningPoint",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "sip.udp-listening-point",
+      "type": "javax.sip.ListeningPoint",
+      "sourceType": "com.ruoyi.sip_server.config.SipConfig"
+    },
+    {
+      "name": "swagger.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启swagger",
+      "sourceType": "com.ruoyi.config.SwaggerConfig"
+    },
+    {
+      "name": "swagger.path-mapping",
+      "type": "java.lang.String",
+      "description": "设置请求的统一前缀",
+      "sourceType": "com.ruoyi.config.SwaggerConfig"
+    },
+    {
+      "name": "thread-pool.await-termination-seconds",
+      "type": "java.lang.Integer",
+      "description": "设置等待关闭时间 秒",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "thread-pool.core-pool-size",
+      "type": "java.lang.Integer",
+      "description": "核心线程数",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "thread-pool.keep-alive-seconds",
+      "type": "java.lang.Integer",
+      "description": "设置线程活跃时间（秒）",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "thread-pool.max-pool-size",
+      "type": "java.lang.Integer",
+      "description": "最大线程数",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "thread-pool.queue-capacity",
+      "type": "java.lang.Integer",
+      "description": "队列容量",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "thread-pool.thread-name-prefix",
+      "type": "java.lang.String",
+      "description": "设置线程名称前缀",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "thread-pool.wait-task-close-thread",
+      "type": "java.lang.Boolean",
+      "description": "等待所有任务结束后再关闭线程池",
+      "sourceType": "com.ruoyi.config.ThreadPoolConfig"
+    },
+    {
+      "name": "zlmediakit.api-debug",
+      "type": "java.lang.String",
+      "description": "是否调试http api,启用调试后，会打印每次http请求的内容和回复",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.api-default-snap",
+      "type": "java.lang.String",
+      "description": "默认截图图片，在启动FFmpeg截图后但是截图还未生成时，可以返回默认的预设图片",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.api-secret",
+      "type": "java.lang.String",
+      "description": "一些比较敏感的http api在访问时需要提供secret，否则无权限调用,如果是通过127.0.0.1访问,那么可以不提供secret",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.api-snap-root",
+      "type": "java.lang.String",
+      "description": "截图保存路径根目录，截图通过http api(\/index\/api\/getSnap)生成和获取",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.cluster-origin-url",
+      "type": "java.lang.String",
+      "description": "#设置源站拉流url模板, 格式跟printf类似，第一个%s指定app,第二个%s指定stream_id, #开启集群模式后，on_stream_not_found和on_stream_none_reader hook将无效. #溯源模式支持以下类型: #rtmp方式: rtmp:\/\/127.0.0.1:1935\/%s\/%s #rtsp方式: rtsp:\/\/127.0.0.1:554\/%s\/%s #hls方式: http:\/\/127.0.0.1:80\/%s\/%s\/hls.m3u8 #http-ts方式: http:\/\/127.0.0.1:80\/%s\/%s.live.ts #支持多个源站，不同源站通过分号(;)分隔",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.cluster-timeout-sec",
+      "type": "java.lang.String",
+      "description": "#溯源总超时时长，单位秒，float型；假如源站有3个，那么单次溯源超时时间为timeout_sec除以3 #单次溯源超时时间不要超过general.maxStreamWaitMS配置",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.default-z-l-media-kit",
+      "type": "com.ruoyi.domain.ZLMediaKit",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.ffmpeg-bin",
+      "type": "java.lang.String",
+      "description": "FFmpeg可执行程序路径,支持相对路径\/绝对路径",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.ffmpeg-cmd",
+      "type": "java.lang.String",
+      "description": "FFmpeg拉流再推流的命令模板，通过该模板可以设置再编码的一些参数",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.ffmpeg-log",
+      "type": "java.lang.String",
+      "description": "FFmpeg日志的路径，如果置空则不生成FFmpeg日志,可以为相对(相对于本可执行程序目录)或绝对路径",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.ffmpeg-restart-sec",
+      "type": "java.lang.String",
+      "description": "自动重启的时间(秒),默认为0,也就是不自动重启.主要是为了避免长时间ffmpeg拉流导致的不同步现象",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.ffmpeg-snap",
+      "type": "java.lang.String",
+      "description": "FFmpeg生成截图的命令，可以通过修改该配置改变截图分辨率或质量",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.forbid-cache-suffix",
+      "type": "java.lang.String",
+      "description": "#禁止后缀的文件缓存，使用“,”隔开 #例如赋值为 .mp4,.flv #那么访问后缀为.mp4与.flv 的文件不缓存",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-add-mute-audio",
+      "type": "java.lang.String",
+      "description": "#是否全局添加静音aac音频，转协议时有效 #有些播放器在打开单视频流时不能秒开，添加静音音频可以加快秒开速度",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-continue-push-ms",
+      "type": "java.lang.String",
+      "description": "#推流断开后可以在超时时间内重新连接上继续推流，这样播放器会接着播放。 #置0关闭此特性(推流断开会导致立即断开播放器) #此参数不应大于播放器超时时间",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-enable-audio",
+      "type": "java.lang.String",
+      "description": "#转协议是否全局开启或关闭音频",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-enable-vhost",
+      "type": "java.lang.String",
+      "description": "是否启用虚拟主机",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-flowthreshold",
+      "type": "java.lang.String",
+      "description": "播放器或推流器在断开后会触发hook.on_flow_report事件(使用多少流量事件)，flowThreshold参数控制触发hook.on_flow_report事件阈值，使用流量超过该阈值后才触发，单位KB",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-fmp4-demand",
+      "type": "java.lang.String",
+      "description": "#以下是按需转协议的开关，在测试ZLMediaKit的接收推流性能时，请把下面开关置1 #如果某种协议你用不到，你可以把以下开关置1以便节省资源(但是还是可以播放，只是第一个播放者体验稍微差点)，如果某种协议你想获取最好的用户体验，请置0(第一个播放者可以秒开，且不花屏) #http[s]-fmp4、ws[s]-fmp4协议是否按需生成",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-hls-demand",
+      "type": "java.lang.String",
+      "description": "#以下是按需转协议的开关，在测试ZLMediaKit的接收推流性能时，请把下面开关置1 #如果某种协议你用不到，你可以把以下开关置1以便节省资源(但是还是可以播放，只是第一个播放者体验稍微差点)，如果某种协议你想获取最好的用户体验，请置0(第一个播放者可以秒开，且不花屏) #hls协议是否按需生成，如果hls.segNum配置为0(意味着hls录制)，那么hls将一直生成(不管此开关)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-max-stream-wait-ms",
+      "type": "java.lang.String",
+      "description": "#播放最多等待时间，单位毫秒 #播放在播放某个流时，如果该流不存在， #ZLMediaKit会最多让播放器等待maxStreamWaitMS毫秒 #如果在这个时间内，该流注册成功，那么会立即返回播放器播放成功 #否则返回播放器未找到该流，该机制的目的是可以先播放再推流 默认15秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-media-server-id",
+      "type": "java.lang.String",
+      "description": "#服务器唯一id，用于触发hook时区别是哪台服务器",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-merge-write-ms",
+      "type": "java.lang.String",
+      "description": "#合并写缓存大小(单位毫秒)，合并写指服务器缓存一定的数据后才会一次性写入socket，这样能提高性能，但是会提高延时 #开启后会同时关闭TCP_NODELAY并开启MSG_MORE",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-modify-stamp",
+      "type": "java.lang.String",
+      "description": "#全局的时间戳覆盖开关，在转协议时，对frame进行时间戳覆盖 #该开关对rtsp\/rtmp\/rtp推流、rtsp\/rtmp\/hls拉流代理转协议时生效 #会直接影响rtsp\/rtmp\/hls\/mp4\/flv等协议的时间戳 #同协议情况下不影响(例如rtsp\/rtmp推流，那么播放rtsp\/rtmp时不会影响时间戳)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-publish-to-hls",
+      "type": "java.lang.String",
+      "description": "#是否默认推流时转换成hls，hook接口(on_publish)中可以覆盖该设置",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-publish-to-mp4",
+      "type": "java.lang.String",
+      "description": "#是否默认推流时mp4录像，hook接口(on_publish)中可以覆盖该设置",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-reset-when-re-play",
+      "type": "java.lang.String",
+      "description": "#拉流代理时如果断流再重连成功是否删除前一次的媒体流数据，如果删除将重新开始， #如果不删除将会接着上一次的数据继续写(录制hls\/mp4时会继续在前一个文件后面写)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-rtmp-demand",
+      "type": "java.lang.String",
+      "description": "#以下是按需转协议的开关，在测试ZLMediaKit的接收推流性能时，请把下面开关置1 #如果某种协议你用不到，你可以把以下开关置1以便节省资源(但是还是可以播放，只是第一个播放者体验稍微差点)，如果某种协议你想获取最好的用户体验，请置0(第一个播放者可以秒开，且不花屏) #rtmp[s]、http[s]-flv、ws[s]-flv协议是否按需生成",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-rtsp-demand",
+      "type": "java.lang.String",
+      "description": "#以下是按需转协议的开关，在测试ZLMediaKit的接收推流性能时，请把下面开关置1 #如果某种协议你用不到，你可以把以下开关置1以便节省资源(但是还是可以播放，只是第一个播放者体验稍微差点)，如果某种协议你想获取最好的用户体验，请置0(第一个播放者可以秒开，且不花屏) #rtsp[s]协议是否按需生成",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-stream-none-reader-delay-ms",
+      "type": "java.lang.String",
+      "description": "#某个流无人观看时，触发hook.on_stream_none_reader事件的最大等待时间，单位毫秒 #在配合hook.on_stream_none_reader事件时，可以做到无人观看自动停止拉流或停止接收推流 默认3分钟",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-ts-demand",
+      "type": "java.lang.String",
+      "description": "#以下是按需转协议的开关，在测试ZLMediaKit的接收推流性能时，请把下面开关置1 #如果某种协议你用不到，你可以把以下开关置1以便节省资源(但是还是可以播放，只是第一个播放者体验稍微差点)，如果某种协议你想获取最好的用户体验，请置0(第一个播放者可以秒开，且不花屏) #http[s]-ts协议是否按需生成",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-unready-frame-cache",
+      "type": "java.lang.String",
+      "description": "#如果track未就绪，我们先缓存帧数据，但是有最大个数限制，防止内存溢出",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-wait-add-track-ms",
+      "type": "java.lang.String",
+      "description": "#如果流只有单Track，最多等待若干毫秒，超时后未收到其他Track的数据，则认为是单Track #如果协议元数据有声明特定track数，那么无此等待时间",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.general-wait-track-ready-ms",
+      "type": "java.lang.String",
+      "description": "#最多等待未初始化的Track时间，单位毫秒，超时之后会忽略未初始化的Track",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-broadcast-record-ts",
+      "type": "java.lang.String",
+      "description": "#是否广播 ts 切片完成通知",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-delete-delay-sec",
+      "type": "java.lang.String",
+      "description": "#直播hls文件删除延时，单位秒，issue: #913",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-file-buf-size",
+      "type": "java.lang.String",
+      "description": "#hls写文件的buf大小，调整参数可以提高文件io性能",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-file-path",
+      "type": "java.lang.String",
+      "description": "#hls保存文件路径 #可以为相对(相对于本可执行程序目录)或绝对路径",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-seg-dur",
+      "type": "java.lang.String",
+      "description": "#hls最大切片时间",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-seg-num",
+      "type": "java.lang.String",
+      "description": "#m3u8索引中,hls保留切片个数(实际保留切片个数大2~3个) #如果设置为0，则不删除切片，而是保存为点播",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hls-seg-retain",
+      "type": "java.lang.String",
+      "description": "#HLS切片从m3u8文件中移除后，继续保留在磁盘上的个数",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-admin-params",
+      "type": "java.lang.String",
+      "description": "# 在推流时，如果url参数匹对admin_params，那么可以不经过hook鉴权直接推流成功，播放时亦然 # 该配置项的目的是为了开发者自己调试测试，该参数暴露后会有泄露隐私的安全隐患",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-alive-interval",
+      "type": "java.lang.String",
+      "description": "#keepalive hook触发间隔,单位秒，float类型",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-enable",
+      "type": "java.lang.String",
+      "description": "#是否启用hook事件，启用后，推拉流都将进行鉴权[请勿关闭,否则不会触发Hook接口,导致前端一直收流超时]",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-ip",
+      "type": "java.lang.String",
+      "description": "设置国标信令服务器所在公网或者同一局域网下ip(部署在同一个网卡网段上可以127.0.0.1)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-flow-report",
+      "type": "java.lang.String",
+      "description": "#播放器或推流器使用流量事件，置空则关闭",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-http-access",
+      "type": "java.lang.String",
+      "description": "#访问http文件鉴权事件，置空则关闭鉴权",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-play",
+      "type": "java.lang.String",
+      "description": "#播放鉴权事件，置空则关闭鉴权",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-publish",
+      "type": "java.lang.String",
+      "description": "#推流鉴权事件，置空则关闭鉴权",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-record-mp4",
+      "type": "java.lang.String",
+      "description": "#录制mp4切片完成事件",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-record-ts",
+      "type": "java.lang.String",
+      "description": "# 录制 hls ts 切片完成事件",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-rtsp-auth",
+      "type": "java.lang.String",
+      "description": "#rtsp播放鉴权事件，此事件中比对rtsp的用户名密码",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-rtsp-realm",
+      "type": "java.lang.String",
+      "description": "#rtsp播放是否开启专属鉴权事件，置空则关闭rtsp鉴权。rtsp播放鉴权还支持url方式鉴权 #建议开发者统一采用url参数方式鉴权，rtsp用户名密码鉴权一般在设备上用的比较多 #开启rtsp专属鉴权后，将不再触发on_play鉴权事件",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-server-keepalive",
+      "type": "java.lang.String",
+      "description": "#server保活上报",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-server-started",
+      "type": "java.lang.String",
+      "description": "#服务器启动报告，可以用于服务器的崩溃重启事件监听",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-shell-login",
+      "type": "java.lang.String",
+      "description": "#远程telnet调试鉴权事件",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-stream-changed",
+      "type": "java.lang.String",
+      "description": "#直播流注册或注销事件",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-stream-none-reader",
+      "type": "java.lang.String",
+      "description": "#无人观看流事件，通过该事件，可以选择是否关闭无人观看的流。配合general.streamNoneReaderDelayMS选项一起使用",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-on-stream-not-found",
+      "type": "java.lang.String",
+      "description": "#播放时，未找到流事件，通过配合hook.on_stream_none_reader事件可以完成按需拉流",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-port",
+      "type": "java.lang.String",
+      "description": "信令服务器端口",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.hook-timeout-sec",
+      "type": "java.lang.String",
+      "description": "#hook api最大等待回复时间，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-char-set",
+      "type": "java.lang.String",
+      "description": "#http服务器字符编码，windows上默认gb2312",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-dir-menu",
+      "type": "java.lang.String",
+      "description": "#是否显示文件夹菜单，开启后可以浏览文件夹",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-ip",
+      "type": "java.lang.String",
+      "description": "流媒体服务器所在的公网或者局域网ip",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-keep-alive-second",
+      "type": "java.lang.String",
+      "description": "#http链接超时时间",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-max-req-size",
+      "type": "java.lang.String",
+      "description": "#http请求体最大字节数，如果post的body太大，则不适合缓存body在内存",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-not-found",
+      "type": "java.lang.String",
+      "description": "#404网页内容，用户可以自定义404网页(<html><head><title>404 Not Found<\/title><\/head><body bgcolor=\"white\"><center><h1>您访问的资源不存在！<\/h1><\/center><hr><center>ZLMediaKit-4.0<\/center><\/body><\/html>)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-port",
+      "type": "java.lang.String",
+      "description": "#http服务器监听端口",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-root-path",
+      "type": "java.lang.String",
+      "description": "#http文件服务器根目录 #可以为相对(相对于本可执行程序目录)或绝对路径",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-send-buf-size",
+      "type": "java.lang.String",
+      "description": "#http文件服务器读文件缓存大小，单位BYTE，调整该参数可以优化文件io性能",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-ssl-port",
+      "type": "java.lang.String",
+      "description": "#https服务器监听端口",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-stream-ip",
+      "type": "java.lang.String",
+      "description": "推流出去的ip地址(获取的流ip地址)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.http-virtual-path",
+      "type": "java.lang.String",
+      "description": "#虚拟目录, 虚拟目录名和文件路径使用\",\"隔开，多个配置路径间用\";\"隔开 #例如赋值为 app_a,\/path\/to\/a;app_b,\/path\/to\/b 那么 #访问 http:\/\/127.0.0.1\/app_a\/file_a 对应的文件路径为 \/path\/to\/a\/file_a #访问 http:\/\/127.0.0.1\/app_b\/file_b 对应的文件路径为 \/path\/to\/b\/file_b #访问其他http路径,对应的文件路径还是在rootPath内",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.is-https",
+      "type": "java.lang.Boolean",
+      "description": "是否是Https",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.kit-http-util",
+      "type": "com.ruoyi.utils.ZLMediaKitHttpUtil",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.multicast-addr-max",
+      "type": "java.lang.String",
+      "description": "#rtp组播截止组播ip地址",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.multicast-addr-min",
+      "type": "java.lang.String",
+      "description": "#rtp组播起始组播ip地址",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.multicast-udp-ttl",
+      "type": "java.lang.String",
+      "description": "#组播udp ttl",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-app-name",
+      "type": "java.lang.String",
+      "description": "#mp4录制或mp4点播的应用名，通过限制应用名，可以防止随意点播 #点播的文件必须放置在此文件夹下",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-fast-start",
+      "type": "java.lang.String",
+      "description": "#mp4录制完成后是否进行二次关键帧索引写入头部",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-file-buf-size",
+      "type": "java.lang.String",
+      "description": "#mp4录制写文件缓存，单位BYTE,调整参数可以提高文件io性能",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-file-path",
+      "type": "java.lang.String",
+      "description": "#mp4录制保存、mp4点播根路径 #可以为相对(相对于本可执行程序目录)或绝对路径",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-file-repeat",
+      "type": "java.lang.String",
+      "description": "#MP4点播(rtsp\/rtmp\/http-flv\/ws-flv)是否循环播放文件",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-file-second",
+      "type": "java.lang.String",
+      "description": "#mp4录制切片时间，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.record-sample-ms",
+      "type": "java.lang.String",
+      "description": "#mp4点播每次流化数据量，单位毫秒， #减少该值可以让点播数据发送量更平滑，增大该值则更节省cpu资源",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtc-extern-ip",
+      "type": "java.lang.String",
+      "description": "#本机对rtc客户端的可见ip，作为服务器时一般为公网ip，置空时，会自动获取网卡ip",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtc-port",
+      "type": "java.lang.String",
+      "description": "#rtc udp服务器监听端口号，所有rtc客户端将通过该端口传输stun\/dtls\/srtp\/srtcp数据， #该端口是多线程的，同时支持客户端网络切换导致的连接迁移 #需要注意的是，如果服务器在nat内，需要做端口映射时，必须确保外网映射端口跟该端口一致",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtc-preferred-codec-a",
+      "type": "java.lang.String",
+      "description": "#rtc支持的音频codec类型,在前面的优先级更高 #以下范例为所有支持的音频codec",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtc-preferred-codec-v",
+      "type": "java.lang.String",
+      "description": "#rtc支持的视频codec类型,在前面的优先级更高 #以下范例为所有支持的视频codec",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtc-remb-bit-rate",
+      "type": "java.lang.String",
+      "description": "#设置remb比特率，非0时关闭twcc并开启remb。该设置在rtc推流时有效，可以控制推流画质 #目前已经实现twcc自动调整码率，关闭remb根据真实网络状况调整码率",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtc-timeout-sec",
+      "type": "java.lang.String",
+      "description": "#rtc播放推流、播放超时时间",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtmp-handshake-second",
+      "type": "java.lang.String",
+      "description": "#rtmp必须在此时间内完成握手，否则服务器会断开链接，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtmp-keep-alive-second",
+      "type": "java.lang.String",
+      "description": "#rtmp超时时间，如果该时间内未收到客户端的数据， #或者tcp发送缓存超过这个时间，则会断开连接，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtmp-modify-stamp",
+      "type": "java.lang.String",
+      "description": "#在接收rtmp推流时，是否重新生成时间戳(很多推流器的时间戳着实很烂)",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtmp-port",
+      "type": "java.lang.String",
+      "description": "#rtmp服务器监听端口",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtmp-ssl-port",
+      "type": "java.lang.String",
+      "description": "#rtmps服务器监听地址",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-audio-mtu-size",
+      "type": "java.lang.String",
+      "description": "#音频mtu大小，该参数限制rtp最大字节数，推荐不要超过1400 #加大该值会明显增加直播延时",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-proxy-dump-dir",
+      "type": "java.lang.String",
+      "description": "#导出调试数据(包括rtp\/ps\/h264)至该目录,置空则关闭数据导出",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-proxy-port",
+      "type": "java.lang.String",
+      "description": "#udp和tcp代理服务器，支持rtp(必须是ts或ps类型)代理",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-proxy-port-range",
+      "type": "java.lang.String",
+      "description": "#随机端口范围，最少确保36个端口 #该范围同时限制rtsp服务器udp端口范围",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-proxy-timeout-sec",
+      "type": "java.lang.String",
+      "description": "#rtp超时时间，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-rtp-max-size",
+      "type": "java.lang.String",
+      "description": "#rtp包最大长度限制，单位KB,主要用于识别TCP上下文破坏时，获取到错误的rtp",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtp-video-mtu-size",
+      "type": "java.lang.String",
+      "description": "#视频mtu大小，该参数限制rtp最大字节数，推荐不要超过1400",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtsp-auth-basic",
+      "type": "java.lang.String",
+      "description": "#rtsp专有鉴权方式是采用base64还是md5方式",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtsp-direct-proxy",
+      "type": "java.lang.String",
+      "description": "#rtsp拉流、推流代理是否是直接代理模式 #直接代理后支持任意编码格式，但是会导致GOP缓存无法定位到I帧，可能会导致开播花屏 #并且如果是tcp方式拉流，如果rtp大于mtu会导致无法使用udp方式代理 #假定您的拉流源地址不是264或265或AAC，那么你可以使用直接代理的方式来支持rtsp代理 #如果你是rtsp推拉流，但是webrtc播放，也建议关闭直接代理模式， #因为直接代理时，rtp中可能没有sps pps,会导致webrtc无法播放; 另外webrtc也不支持Single NAL Unit Packets类型rtp #默认开启rtsp直接代理，rtmp由于没有这些问题，是强制开启直接代理的",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtsp-handshake-second",
+      "type": "java.lang.String",
+      "description": "#rtsp必须在此时间内完成握手，否则服务器会断开链接，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtsp-keep-alive-second",
+      "type": "java.lang.String",
+      "description": "#rtsp超时时间，如果该时间内未收到客户端的数据， #或者tcp发送缓存超过这个时间，则会断开连接，单位秒",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtsp-port",
+      "type": "java.lang.String",
+      "description": "#rtsp服务器监听地址",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.rtsp-ssl-port",
+      "type": "java.lang.String",
+      "description": "#rtsps服务器监听地址",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.shell-max-req-size",
+      "type": "java.lang.String",
+      "description": "#调试telnet服务器接受最大bufffer大小",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.shell-port",
+      "type": "java.lang.String",
+      "description": "#调试telnet服务器监听端口",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    },
+    {
+      "name": "zlmediakit.sip-config",
+      "type": "com.ruoyi.sip_server.config.SipConfig",
+      "sourceType": "com.ruoyi.media.config.ZLMediaKitConfig"
+    }
+  ],
+  "hints": []
+}

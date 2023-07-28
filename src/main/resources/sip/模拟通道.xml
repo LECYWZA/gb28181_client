@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="%s" standalone="no"?>
+<Response>
+    <CmdType>Catalog</CmdType>
+    <SN>%s</SN>
+    <DeviceID>%s</DeviceID>
+    <SumNum>1</SumNum>
+    <DeviceList Num="1">
+        <Item>
+            <DeviceID>%s</DeviceID>
+            <Name>%s</Name>
+            <Manufacturer>shiyuetech</Manufacturer>
+            <Model>RealGBD_V2.1.1</Model>
+            <Owner>RealGBD_V2</Owner>
+            <CivilCode>435200</CivilCode>
+            <Block>435200</Block>
+            <Address>wuhan</Address>
+            <Parental>0</Parental>
+            <ParentID>%s</ParentID>
+            <IPAddress/>
+            <Port>0</Port>
+            <Password/>
+            <Status>ON</Status>
+            <Longitude>114.33</Longitude>
+            <Latitude>30.35</Latitude>
+        </Item>
+    </DeviceList>
+    <Result>OK</Result>
+</Response>

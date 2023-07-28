@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="%s" standalone="no"?>
+<Response>
+    <CmdType>DeviceInfo</CmdType>
+    <SN>%s</SN>
+    <!--两个名字一样,适配不同平台-->
+    <Name>%s</Name>
+    <DeviceName>%s</DeviceName>
+    <DeviceID>%s</DeviceID>
+    <Result>OK</Result>
+    <!-- 设备生产商 -->
+    <Manufacturer>海康威视</Manufacturer>
+    <!-- 设备型号(可选)-->
+    <Model>TC-2808AN-HD</Model>
+    <!-- 设备固件版本(可选)-->
+    <Firmware>V2.1,build091111</Firmware>
+    <!-- 视频输入通道数(可选)-->
+    <Channel>%s</Channel>/>
+    <Result>OK</Result>
+</Response>

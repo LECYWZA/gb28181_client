@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312"?>
+<Response>
+    <SN>708813</SN>
+    <DeviceID>44010200492000000008</DeviceID>
+    <CmdType>RecordInfo</CmdType>
+    <Name>IPCamera 01</Name>
+    <SumNum>174</SumNum>
+    <RecordList Num="2">
+        <Item>
+            <DeviceID>44010200492000000008</DeviceID>
+            <Name>IPCamera 01</Name>
+            <FilePath>file_path</FilePath>
+            <Address>Address 1</Address>
+            <StartTime>2022-06-23T10:23:41</StartTime>
+            <EndTime>2022-06-23T10:23:56</EndTime>
+            <Secrecy>0 </Secrecy>
+            <Type>all</Type>
+        </Item>
+        <Item>
+            <DeviceID>44010200492000000008</DeviceID>
+            <Name>IPCamera 01</Name>
+            <FilePath>file_path</FilePath>
+            <Address>Address 1</Address>
+            <StartTime>2022-06-23T10:23:41</StartTime>
+            <EndTime>2022-06-23T10:23:47</EndTime>
+            <Secrecy>0 </Secrecy>
+            <Type>all</Type>
+        </Item>
+    </RecordList>
+</Response>
