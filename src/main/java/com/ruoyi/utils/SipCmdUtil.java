@@ -155,12 +155,12 @@ public class SipCmdUtil {
      *
      * @param deviceId 设备id
      */
-    public void sendDeviceInfo(RequestEvent event, String deviceId) {
+    public void sendDeviceInfo(RequestEvent event, String deviceId,Integer sn) {
         Device device = DeviceInit.ds.get(deviceId);
         Request request = event.getRequest();
         if (device != null && request != null) {
             try {
-                String deviceInfo = SIPLink.getDeviceInfo(device, null);
+                String deviceInfo = SIPLink.getDeviceInfo(device, sn);
                 String tm1 = UUID.fastUUID().toString(true);
                 String tm2 = UUID.fastUUID().toString(true);
 
@@ -183,19 +183,19 @@ public class SipCmdUtil {
      * @param event
      * @param deviceId
      */
-    public void sendCatalog(RequestEvent event, String deviceId) {
+    public void sendCatalog(RequestEvent event, String deviceId,Integer sn) {
         Device device = DeviceInit.ds.get(deviceId);
         Request request = event.getRequest();
         if (device != null && request != null) {
             try {
-                String catalog = SIPLink.getCatalog(device, null);
+                String catalog = SIPLink.getCatalog(device, sn);
 
                 String tm1 = UUID.fastUUID().toString(true);
                 String tm2 = UUID.fastUUID().toString(true);
 
                 FromHeader fromHeader = (FromHeader) request.getHeader(FromHeader.NAME);
                 CallIdHeader callIdHeader = udpSipProvider.getNewCallId();
-                Request req = sipUtil.createMessageRequest(device, catalog, tm1/*fromHeader.getTag()*/,"z9hG4bK-"+tm2, callIdHeader);
+                Request req = sipUtil.createMessageRequest(device, catalog, tm1,"z9hG4bK-"+tm2, callIdHeader);
                 udpSipProvider.sendRequest(req);
             } catch (Exception e) {
                 e.printStackTrace();

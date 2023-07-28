@@ -14,7 +14,6 @@ import org.json.JSONObject;
 import org.json.XML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
@@ -59,7 +58,6 @@ public class SipMessageEventExecute implements ApplicationListener<SipMessageEve
 
 
     @Override
-    @Async("my")
     public void onApplicationEvent(SipMessageEvent evt) {
         RequestEvent event = evt.getEvt();
         Request request = event.getRequest();
@@ -71,6 +69,7 @@ public class SipMessageEventExecute implements ApplicationListener<SipMessageEve
                 return;
             }
             String cmd = XMLUtil.getString(json, "CmdType");
+            Integer sn = XMLUtil.getInteger(json, "SN");
             String deviceId = XMLUtil.getString(json, "DeviceID");
 
             if (!StringUtils.hasText(deviceId)) {
@@ -83,21 +82,21 @@ public class SipMessageEventExecute implements ApplicationListener<SipMessageEve
             // 更新设备信息
             if ("DeviceInfo".equalsIgnoreCase(cmd)) {
                 log.info("\n[{}]发送设备信息....", deviceId);
-                sipCmdUtil.sendDeviceInfo(event,deviceId);
+                sipCmdUtil.sendDeviceInfo(event,deviceId,sn);
                 new MyTest(deviceId, "发送设备信息");
 
             }
 
             // 发送录像
             else if ("RecordInfo".equalsIgnoreCase(cmd)) {
-                log.info("\n[{}]发送录像信息....", deviceId);
+                log.info("\n[{}]发送录像信息....没实现", deviceId);
 
             }
 
             //目录响应，保存到redis
             else if ("Catalog".equalsIgnoreCase(cmd)) {
                 log.info("\n[{}]发送通道信息....", deviceId);
-                sipCmdUtil.sendCatalog(event,deviceId);
+                sipCmdUtil.sendCatalog(event,deviceId,sn);
                 new MyTest(deviceId, "发送通道信息");
             }
             // 响应设备

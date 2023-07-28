@@ -53,6 +53,22 @@ public class XMLUtil {
     }
 
     /**
+     * getInteger
+     * @param json
+     * @param key
+     * @return
+     */
+    public static Integer getInteger(JSONObject json, String key) {
+        try {
+            return json.getInt(key);
+        } catch (JSONException e) {
+            log.info("\n{} 取值时为空", key, e.getMessage());
+            return null;
+        }
+
+    }
+
+    /**
      * XML 转 Device
      *
      * @param device     设备对象
