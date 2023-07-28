@@ -100,8 +100,8 @@ swagger.path-mapping=/
 # 服务器ip 必填
 sip.ip=192.168.10.9
 # 必填
-sip.port=5998
-sip.password=ewq@123456
+sip.port=5060
+sip.password=123456
 # 必填
 sip.id=99010200492000000001
 sip.domain=9901020049
