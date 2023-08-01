@@ -138,7 +138,7 @@ public class ZLMediaKitConfig {
     /**
      * #转协议是否全局开启或关闭音频
      */
-    private String generalEnableAudio = "0";
+    private String generalEnableAudio = "1";
 
     /**
      * #以下是按需转协议的开关，在测试ZLMediaKit的接收推流性能时，请把下面开关置1

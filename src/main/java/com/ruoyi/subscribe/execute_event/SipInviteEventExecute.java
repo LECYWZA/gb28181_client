@@ -74,7 +74,7 @@ public class SipInviteEventExecute implements ApplicationListener<SipInviteEvent
             CallIdHeader callIdHeader = (CallIdHeader) request.getHeader(CallIdHeader.NAME);
             String callId =  callIdHeader.getCallId();
 
-            log.info("内容: {}", request);
+            log.info("目标SDP内容: \r\n{}", request);
             // 获取设备id [form也是通道id,我直接改34了]
             String fromUri = event.getRequest().getHeader(To.NAME).toString();
             String channelId = fromUri.substring(fromUri.indexOf(":") + 1, fromUri.indexOf("@")).split(":")[1];
@@ -89,16 +89,20 @@ public class SipInviteEventExecute implements ApplicationListener<SipInviteEvent
             // 获取SDP
             Properties p = sipUtil.getProperties(request.getRawContent());
             String ssrc = p.getProperty("y");
+            String spdId = p.getProperty("o").split(" ")[0];
             String ip = p.getProperty("c").split(" ")[2];
             String port = p.getProperty("m").split(" ")[1];
             boolean isTcp = p.getProperty("m").contains("TCP");
 
+
             // 流媒体推流
             boolean b = httpUtil.pushStreamGB(
                     zlMediaKitConfig.getDefaultZLMediaKit(),
-                    ssrc, ip,
-                    String.valueOf(d.getDevicePort()),
-                    port, isTcp
+                    ssrc,
+                    ip,
+                    null,
+                    port,
+                    !isTcp
             );
 
             if (!b){
@@ -110,21 +114,32 @@ public class SipInviteEventExecute implements ApplicationListener<SipInviteEvent
 
             log.info("推流结果: {}", b);
 
+
+
             StringBuffer content = new StringBuffer(200);
             content.append("v=0\r\n");
-            content.append("o=" + channelId + " 0 0 IN IP4 " + d.getZlmIp() + "\r\n");
+            // content.append("o=" + channelId + " 0 0 IN IP4 " + d.getZlmIp() + "\r\n");
+            content.append("o=" + spdId + " 0 0 IN IP4 " + d.getZlmIp() + "\r\n");
             content.append("s=" + "Play" + "\r\n");
             content.append("c=IN IP4 " + d.getZlmIp() + "\r\n");
             content.append("t=0 0\r\n");
             if (isTcp) {
-                content.append("m=video " + d.getZlmPort() + " TCP/RTP/AVP 96\r\n");
+                content.append("m=video " + "30000" + " TCP/RTP/AVP 96\r\n");
             } else {
-                content.append("m=video " + d.getZlmPort() + " RTP/AVP 96\r\n");
+                content.append("m=video " + "30000" + " RTP/AVP 96\r\n");
             }
             content.append("a=sendonly\r\n");
             content.append("a=rtpmap:96 PS/90000\r\n");
             content.append("y=" + ssrc + "\r\n");
+
+            System.out.println("本级推流SDP============================================");
+            System.out.println(content.toString());
+            // 先响应ACK
             sipUtil.responseAck(event, content.toString());
+            // sipUtil.responseAck(event,"");
+
+
+
         } catch (Exception e) {
             log.info("sdp解析错误");
             e.printStackTrace();

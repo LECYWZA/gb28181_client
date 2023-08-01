@@ -60,7 +60,7 @@ public class DeviceInit {
 
         Device d = null;
         int sum = 1;
-        int port = 30000;
+        int port = 40200;
 
         // 创建设备
         for (int i = 0; i < sipConfig.getDeviceSize(); i++, sum++, port++) {

@@ -429,7 +429,7 @@ public class ZLMediaKitHttpUtil {
      * @param isTcp 是否是TCP
      * @return
      */
-    public boolean pushStreamGB(ZLMediaKit zlm, String ssrc, String ip, String port, String toPort, boolean isTcp) {
+    public boolean pushStreamGB(ZLMediaKit zlm, String ssrc, String ip, Integer port, String toPort, boolean isUdp) {
         String msg = "";
         try {
             HashMap<String, Object> map = new HashMap<>();
@@ -449,9 +449,9 @@ public class ZLMediaKitHttpUtil {
             // 目标端口
             map.put("dst_port", toPort);
             // 是否UDP
-            map.put("is_udp", isTcp ? 1 : 0);
-            // 本机推流端口
-            map.put("src_port", port);
+            map.put("is_udp", isUdp ? 1 : 0);
+            // 本机推流端口, 不传随机端口
+             map.put("src_port", port);
             // 是否推送本地MP4录像，该参数非必选参数
             // map.put("from_mp4", "");
 
@@ -464,7 +464,7 @@ public class ZLMediaKitHttpUtil {
             int code = object.getIntValue("code");
             msg = object.getString("msg");
             if (code == 0) {
-                log.info("\n国标推流: 流媒体: {}, 流id:{}", zlm.getGeneralMediaServerId());
+                log.info("\n推流中....");
                 return true;
             }
             log.error("\n国标推流执行错误:[{}][{}][{}]", code,zlm.getGeneralMediaServerId(), msg);
@@ -505,13 +505,13 @@ public class ZLMediaKitHttpUtil {
             int code = object.getIntValue("code");
             msg = object.getString("msg");
             if (code == 0) {
-                log.info("\n停止推流: 流媒体: {}, 流id:{}", zlm.getGeneralMediaServerId());
+                log.info("\n停止推流: ", zlm.getGeneralMediaServerId());
                 return true;
             }
-            log.error("\n停止推流执行错误:[{}][{}][{}]", zlm.getGeneralMediaServerId(), msg);
+            log.error("\n停止错误: [{}]",  msg);
         } catch (Exception e) {
             e.printStackTrace();
-            log.error("\n停止推流执行异常:[{}][{}][{}]", zlm.getGeneralMediaServerId(), e);
+            log.error("\n推流异常:{}", e);
         }
         return false;
     }
